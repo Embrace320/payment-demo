@@ -1,0 +1,43 @@
+server:
+  port: 8090 # 服务端口
+
+spring:
+  application:
+    name: payment-demo #应用的名字
+
+  #设置json返回信息的格式以及时区
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/payment_demo?serverTimezone=GMT%2B8&characterEncoding=utf-8
+    username: root
+    password: 320412
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logging:
+  level:
+    root: info
+
+wxpay:
+  # 横杠在自动装配时换转化为驼峰
+  # 商户号
+  mch-id: 1558950191
+  # 商户API证书序列号
+  mch-serial-no: 34345964330B66427E0D3D28826C4993C77E631F
+  # 商户私钥文件
+  private-key-path: apiclient_key.pem
+  # APIv3密钥
+  api-v3-key: UDuLFDcmy5Eb6o0nTNZdu6ek4DDh4K8B
+  # 微信服务器地址
+  domain: https://api.mch.weixin.qq.com
+  # APPID
+  appid: wx74862e0dfcf69954
+  # 内网穿透地址
+  notify-domain: http://cmh153387907.w3.luyouxia.net
+
