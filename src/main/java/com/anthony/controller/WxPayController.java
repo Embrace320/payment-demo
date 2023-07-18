@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
  * @create 2023-05-19 10:59
  */
 @CrossOrigin//跨域注解
-@RestController
+@RestController //@ResponseBody 和 @Controller的联合注解。@ResponseBody的作用在于将方法的返回值直接写入到response的返回体中
 @RequestMapping("/api/wx-pay")
 @Api(tags = "网站微信支付API")
 @Slf4j //lombok提供的日志打印

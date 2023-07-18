@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * @create 2023-05-16 15:26
  */
 @Configuration
-@MapperScan("com.anthony.mapper") //开启扫描 如果不使用，就必须要求使用@Mapper的类路径在Springboot路径下能找到，才可以正常使用。
+@MapperScan("com.anthony.mapper") //开启扫描 如果不使用，则必须在每个mapper接口上打上@Mapper接口
 @EnableTransactionManagement //启用事务管理
 public class MybatisPlusConfig {
 
